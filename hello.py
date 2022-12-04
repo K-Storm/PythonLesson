@@ -1,14 +1,11 @@
 from tkinter import *
 from tkinter import ttk
 
-def sub_window(i):
-    def test():
-        sub_root = Tk()
-        sub_root.title('S3 ls')
-        sub_frame = ttk.Frame(sub_root, padding=16)
-        sub_label = ttk.Label(sub_frame, text='S3バケット検索')
-        print(i)
-    return test()
+def sub_window():
+    sub_root = Tk()
+    sub_root.title('S3 ls')
+    sub_frame = ttk.Frame(sub_root, padding=16)
+    sub_label = ttk.Label(sub_frame, text='S3バケット検索')
 
 root = Tk()
 root.title('AWS S3 CRUD')
@@ -20,7 +17,7 @@ entry1 = ttk.Entry(frame1, textvariable=t)
 button1 = ttk.Button(
     frame1,
     text='OK',
-    command=sub_window('ff')
+    command=lambda: sub_window()
 )
 
 frame1.pack()
