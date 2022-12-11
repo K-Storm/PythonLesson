@@ -16,7 +16,7 @@ def sub_window():
     sub_button = ttk.Button(
         sub_frame,
         text='PutObject',
-        command=lambda: s3_put_object()
+        command=lambda: s3ope.s3_put_object()
     )
 
     get_label = ttk.Label(sub_frame, text='S3バケット検索')
@@ -25,7 +25,7 @@ def sub_window():
     get_button = ttk.Button(
         sub_frame,
         text='GetObject',
-        command=lambda: s3_get_object()
+        command=lambda: s3ope.s3_get_object()
     )
 
     delete_label = ttk.Label(sub_frame, text='S3バケット検索')
@@ -34,7 +34,7 @@ def sub_window():
     delete_button = ttk.Button(
         sub_frame,
         text='DeleteObject',
-        command=lambda: s3_delete_object()
+        command=lambda: s3ope.s3_delete_object()
     )
 
     sub_frame.pack()
